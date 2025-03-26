@@ -28070,9 +28070,6 @@ main.svc_sl .item_wrap .tag {
 .service section {
   padding: 150px 0;
 }
-.service section:first-child {
-  padding-bottom: 0;
-}
 .service .title_wrap p {
   margin-top: 25px;
 }
@@ -28138,8 +28135,8 @@ main.svc_sl .item_wrap .tag {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 1186px;
-  margin: 0 auto;
+  min-height: 780px;
+  margin: 140px auto 0;
   overflow: hidden;
 }
 .service_main .inner {
@@ -28926,7 +28923,7 @@ main.svc_sl .item_wrap .tag {
 @media all and (max-width: 1200px) {
   .service_main {
     height: auto;
-    margin: 80px 0;
+    margin: 100px 0 0;
   }
   .service_table .table_wrap {
     overflow-x: auto;
@@ -28951,6 +28948,9 @@ main.svc_sl .item_wrap .tag {
   }
   .service_table .table-container {
     display: inline-flex;
+  }
+  .service_card article {
+    padding: 50px 20px;
   }
 }
 @media all and (max-width: 1024px) {
@@ -29169,6 +29169,7 @@ main.svc_sl .item_wrap .tag {
     height: 250px;
   }
   .service_client {
+    background: #fff;
     overflow: hidden;
   }
   .service_client .client_swiper {
@@ -29205,6 +29206,9 @@ main.svc_sl .item_wrap .tag {
   .service_client .review_swiper p {
     font-size: 18px;
   }
+  .service_contents {
+    background: #F9FAFB;
+  }
   .service_contents .btn_wrap {
     margin-bottom: 50px;
   }
@@ -29229,6 +29233,9 @@ main.svc_sl .item_wrap .tag {
   .service_contents .img_wrap img {
     width: auto;
     height: 416px;
+  }
+  .service_management {
+    background: #F9FAFB;
   }
   .service_management article {
     width: 100%;
