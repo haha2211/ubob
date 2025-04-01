@@ -29218,6 +29218,12 @@ main.svc_sl .item_wrap .tag {
   .service_client .review_swiper p {
     font-size: 18px;
   }
+  .service_client .review_desc span {
+    font-size: 14px;
+  }
+  .service_client .review_desc img {
+    max-height: 30px;
+  }
   .service_contents .btn_wrap {
     margin-bottom: 50px;
   }
@@ -29345,6 +29351,9 @@ main.svc_sl .item_wrap .tag {
   }
   .service_carousel .text_wrap {
     align-content: center;
+  }
+  .service_table .title_wrap p {
+    font-size: 14px;
   }
   .service_table .table-container {
     align-items: flex-end;
@@ -29592,6 +29601,11 @@ main.svc_sl .item_wrap .tag {
   .service_client .title_wrap br {
     display: block;
   }
+  .service_client .review_slider .slide {
+    width: 300px;
+    height: 250px;
+    padding: 30px;
+  }
   .service_client .review_swiper a {
     min-height: 392px;
   }
@@ -29643,4 +29657,79 @@ main.svc_sl .item_wrap .tag {
   .service_table .hrdarchive_wrap .compare {
     margin-top: 40px;
   }
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: local("Noto Sans KR"), url("../fonts/Noto_Sans_KR/NotoSansKR-Light.ttf") format("ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: local("Noto Sans KR"), url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: local("Noto Sans KR"), url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.ttf") format("ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: local("Noto Sans KR"), url("../fonts/Noto_Sans_KR/NotoSansKR-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: local("Noto Sans KR"), url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../fonts/Poppins/Poppins-Light.ttf") format("ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../fonts/Poppins/Poppins-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../fonts/Poppins/Poppins-Medium.ttf") format("ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../fonts/Poppins/Poppins-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../fonts/Poppins/Poppins-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: local("Pretendard"), url("../fonts/Pretendard/Pretendard-Light.subset.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: local("Pretendard"), url("../fonts/Pretendard/Pretendard-Regular.subset.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: local("Pretendard"), url("../fonts/Pretendard/Pretendard-Medium.subset.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: local("Pretendard"), url("../fonts/Pretendard/Pretendard-SemiBold.subset.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: local("Pretendard"), url("../fonts/Pretendard/Pretendard-Bold.subset.woff2") format("woff2");
+  font-weight: 700;
 }
