@@ -25020,13 +25020,17 @@ main .bg_color {
 @media all and (max-width: 599px) {
   #header .top_banner {
     height: 50px;
+    flex-wrap: wrap;
   }
   #header .top_banner span {
+    display: block;
     font-size: 14px;
+    line-height: 1.3;
   }
   #header .top_banner strong {
     padding-left: 5px;
     font-size: 14px;
+    line-height: 1.3;
   }
   #header .top_banner svg {
     margin-left: 5px;
@@ -28372,6 +28376,9 @@ main.svc_sl .item_wrap .tag {
     }
   }
 }
+.service_client {
+  background-color: var(--main-bg-color);
+}
 .service_client .title_wrap br {
   display: none;
 }
@@ -28744,6 +28751,7 @@ main.svc_sl .item_wrap .tag {
 
 .service_table {
   position: relative;
+  overflow: hidden;
   background: #0f141d no-repeat center/cover url("../img/service/service_graph_bg.png");
 }
 .service_table span {
@@ -28763,7 +28771,7 @@ main.svc_sl .item_wrap .tag {
 .service_table .table-container {
   position: relative;
   display: flex;
-  align-items: anchor-center;
+  align-items: center;
   margin-top: 80px;
 }
 .service_table .table {
@@ -28791,6 +28799,7 @@ main.svc_sl .item_wrap .tag {
 }
 .service_table .table-category {
   width: 207px;
+  height: 100%;
   background: #303847;
   border-radius: 30px 0 0 30px;
   transform: translateY(25px);
@@ -28799,7 +28808,7 @@ main.svc_sl .item_wrap .tag {
   font-size: 16px;
 }
 .service_table .table-category .table-cell {
-  border-bottom: 1px solid #222E3B;
+  border-bottom: 1px solid #3B526C;
 }
 .service_table .table-category .table-cell:first-child {
   min-height: 52px;
@@ -28839,7 +28848,7 @@ main.svc_sl .item_wrap .tag {
   z-index: 2;
 }
 .service_table .table-active .table-cell_wrap div {
-  border-bottom: 1px solid #2B3C51;
+  border-bottom: 1px solid #354860;
 }
 .service_table .table-active .table-cell_wrap div:nth-child(-n+1) {
   min-height: 64px;
@@ -28908,7 +28917,7 @@ main.svc_sl .item_wrap .tag {
   background: rgba(0, 0, 0, 0) linear-gradient(217deg, #1A1F28 0%, #243043 100%) 0% 0% no-repeat padding-box;
 }
 .service_table .table-inactive .table-cell {
-  border-bottom: 1px solid #2B3C51;
+  border-bottom: 1px solid #354860;
 }
 .service_table .table-inactive .table-cell:first-child {
   min-height: 52px;
@@ -28917,6 +28926,9 @@ main.svc_sl .item_wrap .tag {
   border-bottom: none;
 }
 .service_table .mo_show {
+  display: none;
+}
+.service_table .hrdarchive_wrap {
   display: none;
 }
 
@@ -29169,7 +29181,7 @@ main.svc_sl .item_wrap .tag {
     height: 250px;
   }
   .service_client {
-    background: #fff;
+    background-color: #fff;
     overflow: hidden;
   }
   .service_client .client_swiper {
@@ -29364,7 +29376,7 @@ main.svc_sl .item_wrap .tag {
     min-height: 48px;
   }
   .service_table .table-active {
-    width: 240px;
+    width: 300px;
     border-radius: 20px 0 0 0;
     border-top: 1px solid rgba(0, 0, 0, 0);
     background: transparent linear-gradient(102deg, #EB4134 0%, #F58536 100%) 0% 0% no-repeat padding-box;
@@ -29392,7 +29404,7 @@ main.svc_sl .item_wrap .tag {
     font-size: 14px;
   }
   .service_table .table-inactive {
-    width: 240px;
+    width: 300px;
     border-radius: 0 20px 20px 0;
     transform: translateY(0);
     border-top: 1px solid #2B3C51;
@@ -29425,6 +29437,154 @@ main.svc_sl .item_wrap .tag {
     display: block;
   }
 }
+@media all and (max-width: 599px) {
+  .service_table .table_wrap {
+    display: none;
+  }
+  .service_table .title_wrap {
+    margin-bottom: 30px;
+  }
+  .service_table .hrdarchive_wrap {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+  }
+  .service_table .hrdarchive_wrap .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .service_table .hrdarchive_wrap .swiper-slide > div {
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .service_table .hrdarchive_wrap .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .service_table .hrdarchive_wrap .cover {
+    display: inline-flex;
+    position: relative;
+    justify-content: flex-end;
+    padding: 6rem 3rem 3rem;
+    background: transparent linear-gradient(143deg, #EB4134 0%, #F58536 100%) 0% 0% no-repeat padding-box;
+  }
+  .service_table .hrdarchive_wrap .cover h5 {
+    width: 100%;
+    margin-bottom: 80px;
+    text-align: left;
+    font-size: 44px;
+    color: #fff;
+  }
+  .service_table .hrdarchive_wrap .cover .img_wrap {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 126px;
+    max-height: 126px;
+  }
+  .service_table .hrdarchive_wrap .compare {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .service_table .hrdarchive_wrap .item {
+    display: inline-flex;
+    padding: 20px;
+    background: #F9FAFB;
+    border: 1px solid #CFD9E5;
+  }
+  .service_table .hrdarchive_wrap .item .title {
+    margin-top: 10px;
+    text-align: left;
+  }
+  .service_table .hrdarchive_wrap .item .title::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 32px;
+    left: 30px;
+    width: 4px;
+    height: 27px;
+    background: transparent linear-gradient(172deg, #EB4134 0%, #F58536 100%) 0% 0% no-repeat padding-box;
+  }
+  .service_table .hrdarchive_wrap .item .title h6 {
+    padding-left: 24px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .service_table .hrdarchive_wrap .item .desc {
+    position: relative;
+    margin-bottom: 36px;
+    width: 100%;
+  }
+  .service_table .hrdarchive_wrap .item .desc:last-child {
+    margin-bottom: 0;
+  }
+  .service_table .hrdarchive_wrap .item .desc > div {
+    position: relative;
+  }
+  .service_table .hrdarchive_wrap .item .desc strong {
+    position: absolute;
+    display: block;
+    width: 229px;
+    height: 31px;
+    top: -15px;
+    left: 50%;
+    padding: 5px 18px;
+    align-content: center;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    color: #F9FAFB;
+    transform: translateX(-50%);
+  }
+  .service_table .hrdarchive_wrap .item .desc p {
+    font-size: 18px;
+  }
+  .service_table .hrdarchive_wrap .item .inactive {
+    align-content: center;
+    padding: 0 10px;
+    height: 150px;
+    background: #F4F6F8;
+    border: 1px solid #CFD9E5;
+    border-radius: 10px;
+    color: #586478;
+  }
+  .service_table .hrdarchive_wrap .item .inactive strong {
+    background: #2D4261;
+  }
+  .service_table .hrdarchive_wrap .item .active {
+    align-content: center;
+    padding: 0 10px;
+    height: 150px;
+    border: 1px solid #EE5935;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(214, 172, 146, 0.5019607843);
+  }
+  .service_table .hrdarchive_wrap .item .active strong {
+    background: #EE5935;
+  }
+  .service_table .hrdarchive_wrap .item .active p {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .service_table .hrdarchive_wrap .swiper .swiper-pagination {
+    width: 100%;
+    left: 50%;
+    bottom: -42px;
+    transform: translateX(-50%);
+  }
+}
 @media all and (max-width: 499px) {
   .service_client .client_swiper .swiper-slide {
     padding: 0 20px;
@@ -29449,9 +29609,38 @@ main.svc_sl .item_wrap .tag {
   .service_contents .btn_wrap a:last-child {
     margin-bottom: 0;
   }
+  .service_table .hrdarchive_wrap .cover {
+    padding: 4rem 2rem 2rem;
+  }
+  .service_table .hrdarchive_wrap .item .title h6 {
+    padding-left: 20px;
+    font-size: 24px;
+  }
+  .service_table .hrdarchive_wrap .item .title::before {
+    height: 20px;
+  }
+  .service_table .hrdarchive_wrap .item .desc p {
+    font-size: 14px;
+  }
+  .service_table .hrdarchive_wrap .item .desc strong {
+    font-size: 16px;
+  }
+  .service_table .hrdarchive_wrap .cover h5 {
+    font-size: 34px;
+  }
+  .service_table .hrdarchive_wrap .swiper-slide > div {
+    align-content: space-between;
+  }
 }
 @media all and (max-width: 399px) {
   .service_carousel .text_wrap span, .service_carousel .text_wrap strong {
     font-size: 14px;
+  }
+  .service_table .hrdarchive_wrap .item .desc strong {
+    width: 190px;
+    padding: 5px;
+  }
+  .service_table .hrdarchive_wrap .compare {
+    margin-top: 20px;
   }
 }
