@@ -28885,14 +28885,6 @@ main.svc_sl .item_wrap .tag {
   z-index: 0;
   pointer-events: none;
 }
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
 .service_table .table-inactive {
   position: relative;
   width: 483px;
@@ -28932,6 +28924,14 @@ main.svc_sl .item_wrap .tag {
   display: none;
 }
 
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 @media all and (max-width: 1200px) {
   .service_main {
     height: auto;
@@ -29466,6 +29466,10 @@ main.svc_sl .item_wrap .tag {
     width: 100%;
     height: auto;
     text-align: center;
+    background: transparent linear-gradient(180deg, #233147 0%, #38527A 100%) 0% 0% no-repeat padding-box;
+    overflow: hidden;
+    border: 1px solid #CFD9E5;
+    border-radius: 20px;
   }
   .service_table .hrdarchive_wrap .swiper-slide > div {
     position: relative;
@@ -29473,6 +29477,21 @@ main.svc_sl .item_wrap .tag {
     width: 100%;
     height: 100%;
     border-radius: 20px;
+  }
+  .service_table .hrdarchive_wrap .swiper-slide.swiper-slide-active .active .spin_wrap {
+    position: absolute;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .service_table .hrdarchive_wrap .slide-cover {
+    border: none;
   }
   .service_table .hrdarchive_wrap .swiper {
     width: 100%;
@@ -29506,12 +29525,11 @@ main.svc_sl .item_wrap .tag {
   .service_table .hrdarchive_wrap .item {
     display: inline-flex;
     padding: 20px;
-    background: #F9FAFB;
-    border: 1px solid #CFD9E5;
   }
   .service_table .hrdarchive_wrap .item .title {
     margin-top: 10px;
     text-align: left;
+    color: #fff;
   }
   .service_table .hrdarchive_wrap .item .title::before {
     content: "";
@@ -29533,6 +29551,7 @@ main.svc_sl .item_wrap .tag {
     position: relative;
     margin-bottom: 36px;
     width: 100%;
+    background: #1B2029;
   }
   .service_table .hrdarchive_wrap .item .desc:last-child {
     margin-bottom: 0;
@@ -29563,29 +29582,47 @@ main.svc_sl .item_wrap .tag {
     align-content: center;
     padding: 0 10px;
     height: 150px;
-    background: #F4F6F8;
-    border: 1px solid #CFD9E5;
     border-radius: 10px;
     color: #586478;
   }
   .service_table .hrdarchive_wrap .item .inactive strong {
-    background: #2D4261;
+    background: #586478;
+  }
+  .service_table .hrdarchive_wrap .item .inactive p {
+    color: #F1F1F2;
   }
   .service_table .hrdarchive_wrap .item .active {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     align-content: center;
-    padding: 0 10px;
     height: 150px;
-    border: 1px solid #EE5935;
     border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(214, 172, 146, 0.5019607843);
+    background: transparent linear-gradient(96deg, #EB4134 0%, #F58536 100%) 0% 0% no-repeat padding-box;
   }
   .service_table .hrdarchive_wrap .item .active strong {
+    z-index: 11;
     background: #EE5935;
   }
   .service_table .hrdarchive_wrap .item .active p {
-    color: #000;
     font-weight: 600;
     font-size: 18px;
+    color: #F4F6F8;
+  }
+  .service_table .hrdarchive_wrap .item .active .text_wrap {
+    position: relative;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    align-content: center;
+    background: #223046;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    z-index: 10;
+  }
+  .service_table .hrdarchive_wrap .item .active .spin_wrap {
+    display: none;
   }
   .service_table .hrdarchive_wrap .swiper .swiper-pagination {
     width: 100%;
