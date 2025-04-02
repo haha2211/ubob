@@ -28866,12 +28866,12 @@ main.svc_sl .item_wrap .tag {
 .service_table .table-active .table-cell {
   background: #223046;
 }
-.service_table .spin_wrap {
+.service_table .table-active .spin_wrap {
   position: absolute;
   width: 510px;
   height: 640px;
 }
-.service_table .spin_wrap .spin {
+.service_table .table-active .spin_wrap .spin {
   position: absolute;
   width: 500px;
   height: 1000px;
@@ -29481,13 +29481,14 @@ main.svc_sl .item_wrap .tag {
   .service_table .hrdarchive_wrap .swiper-slide.swiper-slide-active .active .spin_wrap {
     position: absolute;
     display: inline-flex;
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: conic-gradient(from 0deg, rgba(255, 255, 255, 0) 60deg, rgba(255, 255, 255, 0.5) 70deg, rgba(255, 255, 255, 0) 80deg, rgba(255, 255, 255, 0) 360deg);
+    animation: spin 8s linear infinite;
     z-index: 0;
-    border-radius: 10px;
     overflow: hidden;
   }
   .service_table .hrdarchive_wrap .slide-cover {
@@ -29602,7 +29603,7 @@ main.svc_sl .item_wrap .tag {
     background: transparent linear-gradient(96deg, #EB4134 0%, #F58536 100%) 0% 0% no-repeat padding-box;
   }
   .service_table .hrdarchive_wrap .item .active strong {
-    z-index: 11;
+    z-index: 2;
     background: #EE5935;
   }
   .service_table .hrdarchive_wrap .item .active p {
@@ -29610,19 +29611,25 @@ main.svc_sl .item_wrap .tag {
     font-size: 18px;
     color: #F4F6F8;
   }
-  .service_table .hrdarchive_wrap .item .active .text_wrap {
+  .service_table .hrdarchive_wrap .item .active .info {
     position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .service_table .hrdarchive_wrap .item .active .text {
+    position: absolute;
     width: calc(100% - 8px);
     height: calc(100% - 8px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-content: center;
     background: #223046;
     border-radius: 8px;
-    border: 4px solid transparent;
-    border-right: 4px solid rgba(0, 0, 0, 0);
-    z-index: 10;
-  }
-  .service_table .hrdarchive_wrap .item .active .spin_wrap {
-    display: none;
+    z-index: 1;
+    overflow: hidden;
   }
   .service_table .hrdarchive_wrap .swiper .swiper-pagination {
     width: 100%;
